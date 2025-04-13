@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import styles from './style';
 
 
- const Perfil = ()=>{
+ const Perfil = (props)=>{
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -22,6 +22,9 @@ import styles from './style';
           <TouchableOpacity style={styles.followButton}>
             <Text style={styles.buttonText}>Seguir</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Galeria") }>
+            <Text style={styles.buttonText}>Fotos</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.searchButton}>
             <Text style={styles.buttonText}>Pesquisar</Text>
           </TouchableOpacity>
@@ -31,7 +34,10 @@ import styles from './style';
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Apresentação</Text>
         <Text style={styles.bio}>
-          Welcome to the Official Facebook page of Pelé.{"\n"}
+          Pelé, considerado o maior jogador de futebol de todos os tempos, nasceu em 23 de outubro de 1940, no Brasil. Conquistou três Copas do Mundo (1958, 1962 e 1970) e marcou mais de 1.000 gols em sua carreira. Além de sua habilidade em campo, tornou-se um embaixador global do esporte e um ícone cultural.
+          {"\n"}
+          Welcome to the Official Facebook page of Pelé.
+          {"\n"}
           Follow me: http://www.twitter.com/Pele
         </Text>
         <Text style={styles.info}>Página • Atleta</Text>
