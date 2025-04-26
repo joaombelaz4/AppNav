@@ -9,24 +9,24 @@ import styles from './style';
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Image
-          source={{ uri: 'https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3317998:1672343315/pele%20gol.jpeg' }}
+          source={{ uri: 'https://i.pinimg.com/736x/80/21/39/80213968573e110cff7e0da1f1b65c9d.jpg' }}
           style={styles.coverPhoto}
         />
         <Image
-          source={{ uri: 'https://static.ndmais.com.br/2020/10/Pel%C3%A9-3.jpg' }}
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfp3oFXy9Glol7BGtVYYPWtUrfLo5PU23vXw&s' }}
           style={styles.profilePic}
         />
-        <Text style={styles.name}>Pelé <Ionicons name="checkmark-circle" size={16} color="#3b82f6" /></Text>
-        <Text style={styles.followers}>seguidores 9,8 mi • seguindo 40</Text>
+        <Text style={styles.name}>ESCOLHA SEU INICIAL<Ionicons name="checkmark-circle" size={16} color="#3b82f6" /></Text>
+        <Text style={styles.followers}>SELECIONE UM ABAIXO</Text>
         <View style={styles.buttonsRow}>
-          <TouchableOpacity style={styles.followButton}>
-            <Text style={styles.buttonText}>Seguir</Text>
+          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Perfil1") }>
+            <Text style={styles.buttonText}>Bulbassauro</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Galeria") }>
-            <Text style={styles.buttonText}>Fotos</Text>
+          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Perfil2") }>
+            <Text style={styles.buttonText}>Charmander</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.searchButton}>
-            <Text style={styles.buttonText}>Pesquisar</Text>
+          <TouchableOpacity style={styles.searchButton} onPress = { () => props.navigation.navigate("Perfil3") }>
+            <Text style={styles.buttonText}>Squirtle</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -34,14 +34,15 @@ import styles from './style';
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Apresentação</Text>
         <Text style={styles.bio}>
-          Pelé, considerado o maior jogador de futebol de todos os tempos, nasceu em 23 de outubro de 1940, no Brasil. Conquistou três Copas do Mundo (1958, 1962 e 1970) e marcou mais de 1.000 gols em sua carreira. Além de sua habilidade em campo, tornou-se um embaixador global do esporte e um ícone cultural.
-          {"\n"}
-          Welcome to the Official Facebook page of Pelé.
-          {"\n"}
-          Follow me: http://www.twitter.com/Pele
+        Professor Carvalho (Professor Oak, no original japonês) é um dos personagens mais icônicos do universo Pokémon. Ele é um renomado pesquisador Pokémon da cidade de Pallet (Vila Pallet), conhecido mundialmente por seus estudos pioneiros sobre a relação entre humanos e Pokémon.
+
+Carvalho é o primeiro mentor de muitos jovens treinadores, sendo o responsável por entregar seus primeiros Pokémon e Pokédex – uma enciclopédia digital que registra os Pokémon encontrados. Entre seus alunos mais famosos estão Ash Ketchum e Gary Carvalho (seu neto).
+
+Antes de se tornar um pesquisador, Carvalho também foi um treinador talentoso, conquistando respeito em batalhas Pokémon. Seu amor pela ciência e pelos Pokémon o levou a dedicar a vida à pesquisa, buscando catalogar todas as espécies e entender melhor seus comportamentos.
+
+Carismático, sábio e às vezes um pouco distraído, o Professor Carvalho é uma figura paterna no mundo Pokémon, incentivando novas gerações a explorar, estudar e respeitar as criaturas que compartilham o mundo com os humanos.
         </Text>
-        <Text style={styles.info}>Página • Atleta</Text>
-        <Text style={styles.link}>pele10.org</Text>
+        <Text style={styles.info}>Página • Professor</Text>
       </View>
     </ScrollView>
   );
