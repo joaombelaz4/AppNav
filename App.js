@@ -1,54 +1,50 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 import Perfil from './component/Perfil';
-import Galeria from './component/Galeria';
 import Perfil1 from './component/Perfil1';
 import Perfil2 from './component/Perfil2';
 import Perfil3 from './component/Perfil3';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Ionicons } from '@expo/vector-icons';
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
-const App = ()=>{
+const App = () => {
   return (
     <NavigationContainer>
-
-      <Drawer.Navigator
+      <Tab.Navigator
         screenOptions={({ route }) => ({
-          drawerIcon: ({ focused, size }) => {
+          tabBarIcon: ({ focused, size }) => {
             let iconName;
-            if (route.name === 'Perfil') {
+            if (route.name === 'Professor Carvalho') {
               iconName = focused ? 'person' : 'person-outline';
-            } else if (route.name === 'Perfil1') {
+            } else if (route.name === 'Bulbassauro') {
               iconName = focused ? 'person' : 'person-outline';
-            } else if (route.name === 'Perfil2') {
+            } else if (route.name === 'Charmander') {
               iconName = focused ? 'person' : 'person-outline';
-            } else if (route.name === 'Perfil3') {
+            } else if (route.name === 'Squirtle') {
               iconName = focused ? 'person' : 'person-outline';
             }
             return <Ionicons name={iconName} size={size} color={focused ? '#007AFF' : '#8e8e93'} />;
           },
         })}
       >
-        <Drawer.Screen name="Professor Carvalho" component={Perfil} />
-        <Drawer.Screen name="Bulbassauro" component={Perfil1} />
-        <Drawer.Screen name="Charmander" component={Perfil2} />
-        <Drawer.Screen name="Squirtle" component={Perfil3} />
-      </Drawer.Navigator>
+        <Tab.Screen name="Professor Carvalho" component={Perfil} />
+        <Tab.Screen name="Bulbassauro" component={Perfil1} />
+        <Tab.Screen name="Charmander" component={Perfil2} />
+        <Tab.Screen name="Squirtle" component={Perfil3} />
+      </Tab.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
   );
-}
+};
 
 export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-}); 
+});
