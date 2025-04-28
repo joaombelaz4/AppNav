@@ -19,13 +19,13 @@ const App = () => {
           tabBarIcon: ({ focused, size }) => {
             let iconName;
             if (route.name === 'Professor Carvalho') {
-              iconName = focused ? 'person' : 'person-outline';
+              iconName = focused ? 'book' : 'book-outline';
             } else if (route.name === 'Bulbassauro') {
-              iconName = focused ? 'person' : 'person-outline';
+              iconName = focused ? 'leaf' : 'leaf-outline';
             } else if (route.name === 'Charmander') {
-              iconName = focused ? 'person' : 'person-outline';
+              iconName = focused ? 'flame' : 'flame-outline';
             } else if (route.name === 'Squirtle') {
-              iconName = focused ? 'person' : 'person-outline';
+              iconName = focused ? 'water' : 'water-outline';
             }
             return <Ionicons name={iconName} size={size} color={focused ? '#007AFF' : '#8e8e93'} />;
           },
