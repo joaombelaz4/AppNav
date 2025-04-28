@@ -19,13 +19,13 @@ import styles from './style';
         <Text style={styles.name}>ESCOLHA SEU INICIAL<Ionicons name="checkmark-circle" size={16} color="#3b82f6" /></Text>
         <Text style={styles.followers}>SELECIONE UM ABAIXO</Text>
         <View style={styles.buttonsRow}>
-          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Perfil1") }>
+          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Bulbassauro") }>
             <Text style={styles.buttonText}>Bulbassauro</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Perfil2") }>
+          <TouchableOpacity style={styles.followButton} onPress = { () => props.navigation.navigate("Charmander") }>
             <Text style={styles.buttonText}>Charmander</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.searchButton} onPress = { () => props.navigation.navigate("Perfil3") }>
+          <TouchableOpacity style={styles.searchButton} onPress = { () => props.navigation.navigate("Squirtle") }>
             <Text style={styles.buttonText}>Squirtle</Text>
           </TouchableOpacity>
         </View>
